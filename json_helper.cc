@@ -57,6 +57,8 @@ void TestJsonHelper() {
     std::string* str1_ptr = &str1;
     utilscpp::JsonHelper().JsonToStr(jsonRoot, str1_ptr);
     std::cout << *str1_ptr << std::endl;
+
+    std::cout << std::endl;
 }
 
 }  // namespace utilscpp

@@ -53,6 +53,8 @@ void TestStringHelper() {
     for (int i = 0; i < vec_ptr->size(); ++i) {
         std::cout << (*vec_ptr)[i] << std::endl;
     }
+
+    std::cout << std::endl;
 }
 
 }  // namespace utilscpp
