@@ -34,10 +34,12 @@ bool JsonHelper::JsonToStr(const Json::Value& json, std::string* str) {
 }
 
 void TestJsonHelper() {
+    std::cout << "***Start Of Test Json Helper***" << std::endl;
+
     Json::Value json;
     Json::Value* json_ptr = &json;
     std::string str = "{\"field1\":1, \"field2\": \"abc\", \"field3\": false}";
-    utilscpp::JsonHelper().StrToJson(str, json_ptr);
+    utilscpp::JsonHelper::StrToJson(str, json_ptr);
     std::cout << *json_ptr << std::endl;
 
     std::cout << std::endl;
@@ -55,10 +57,10 @@ void TestJsonHelper() {
     // std::cout << jsonRoot << std::endl;
     std::string str1;
     std::string* str1_ptr = &str1;
-    utilscpp::JsonHelper().JsonToStr(jsonRoot, str1_ptr);
+    utilscpp::JsonHelper::JsonToStr(jsonRoot, str1_ptr);
     std::cout << *str1_ptr << std::endl;
 
-    std::cout << std::endl;
+    std::cout << "***End Of Test Json Helper***" << std::endl;
 }
 
 }  // namespace utilscpp

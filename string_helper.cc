@@ -38,9 +38,11 @@ bool StringHelper::Split(const std::string& str, const std::string& delimiter, s
 }
 
 void TestStringHelper() {
+    std::cout << "***Start Of Test String Helper***" << std::endl;
+
     std::string a = " 123  ";
     std::string* a_ptr = &a;
-    utilscpp::StringHelper().Trim(a_ptr);
+    utilscpp::StringHelper::Trim(a_ptr);
     std::cout << *a_ptr << std::endl;
 
     std::cout << std::endl;
@@ -49,12 +51,12 @@ void TestStringHelper() {
     std::string d = "^";
     std::vector<std::string> vec;
     std::vector<std::string>* vec_ptr = &vec;
-    utilscpp::StringHelper().Split(b, d, vec_ptr);
+    utilscpp::StringHelper::Split(b, d, vec_ptr);
     for (int i = 0; i < vec_ptr->size(); ++i) {
         std::cout << (*vec_ptr)[i] << std::endl;
     }
 
-    std::cout << std::endl;
+    std::cout << "***End Of Test String Helper***" << std::endl;
 }
 
 }  // namespace utilscpp
