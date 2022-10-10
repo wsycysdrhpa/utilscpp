@@ -54,7 +54,8 @@ bool FileHelper::FileToUmap(const std::string& path, std::unordered_map<std::str
 void TestFileHelper() {
     std::cout << "***Start Of Test File Helper***" << std::endl;
 
-    std::string path = "D:\\Code\\CPP\\test\\test_clion\\src\\utilscpp\\data\\in_file.txt";
+    // relative path should contrast to build dir
+    std::string path = "../data/in_file.txt";
     std::vector<std::string> vec;
     std::vector<std::string>* vec_ptr = &vec;
     utilscpp::FileHelper::FileToVector(path, vec_ptr);
@@ -64,7 +65,7 @@ void TestFileHelper() {
 
     std::cout << std::endl;
 
-    std::string path_2 = "D:\\Code\\CPP\\test\\test_clion\\src\\utilscpp\\data\\in_file_2.txt";
+    std::string path_2 = "../data/in_file_2.txt";
     std::unordered_map<std::string, float> umap;
     std::unordered_map<std::string, float>* umap_ptr = &umap;
     utilscpp::FileHelper::FileToUmap(path_2, umap_ptr);
