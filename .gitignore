@@ -1,5 +1,10 @@
-build
+# Clion
+.idea
+cmake-build-debug
+
+# VSCode
 .vscode
+build
 
 # Prerequisites
 *.d
